@@ -7918,7 +7918,7 @@ const Graph = ForceGraph3D()
     .nodeColor('color')
     .linkSource('source') // specify how to identify link sources
     .linkTarget('target') // specify how to identify link targets
-     .width(window.innerWidth) // set the width of the graph
+    .width(window.innerWidth) // set the width of the graph
     .height(window.innerHeight) // set the height of the graph
     .graphData({ nodes, links });
 
