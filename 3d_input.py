@@ -2,7 +2,7 @@ import pickle
 import json
 import csv
 
-tree = pickle.load(open('Data/Grafo_rutas0_Augusta_2023-10-27T13_00_00.000Z (1).pickle', 'rb'))
+tree = pickle.load(open('Data/Grafo_rutas0_Punta Gorda_2023-11-01T15_00_00.000Z.pickle', 'rb'))
 
 nodes = list(tree.nodes)
 node_enum = {nodes[i]: i for i in range(len(nodes))}
@@ -10,7 +10,7 @@ edges = list(tree.edges)
 edges_ = [{"source": f"Node {node_enum[edges[i][0]]}",
            "target": f"Node {node_enum[edges[i][1]]}"} for i in range(len(edges))]
 
-edges_ = edges_[:100]
+
 color_map = {'0': 'yellow', '1': 'green', '2': 'red', '3': 'blue'}
 colors = [color_map[node.split('#')[0]] for node in nodes]
 nodes_ = [{"id": f"Node {i}", "color": f"{colors[i]}", "city": f"{nodes[i].split('#')[2]}"} for i in range(len(nodes))]
